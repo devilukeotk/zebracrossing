@@ -1,0 +1,152 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nehiljain/Ubuntu One/workspace/linedetection/LSWMS.cpp
+LSWMS.h
+/home/nehiljain/Ubuntu One/workspace/linedetection/LSWMS.h
+stdio.h
+-
+iostream
+-
+stdlib.h
+-
+
+/home/nehiljain/Ubuntu One/workspace/linedetection/LSWMS.h
+opencv2/core/core.hpp
+/home/nehiljain/Ubuntu One/workspace/linedetection/opencv2/core/core.hpp
+opencv2/highgui/highgui.hpp
+/home/nehiljain/Ubuntu One/workspace/linedetection/opencv2/highgui/highgui.hpp
+opencv2/imgproc/imgproc.hpp
+/home/nehiljain/Ubuntu One/workspace/linedetection/opencv2/imgproc/imgproc.hpp
+float.h
+/home/nehiljain/Ubuntu One/workspace/linedetection/float.h
+
+/home/nehiljain/Ubuntu One/workspace/linedetection/main.cpp
+windows.h
+-
+time.h
+-
+stdio.h
+-
+sys/time.h
+-
+time.h
+-
+iostream
+-
+opencv2/core/core.hpp
+/home/nehiljain/Ubuntu One/workspace/linedetection/opencv2/core/core.hpp
+opencv2/highgui/highgui.hpp
+/home/nehiljain/Ubuntu One/workspace/linedetection/opencv2/highgui/highgui.hpp
+opencv2/imgproc/imgproc.hpp
+/home/nehiljain/Ubuntu One/workspace/linedetection/opencv2/imgproc/imgproc.hpp
+LSWMS.h
+/home/nehiljain/Ubuntu One/workspace/linedetection/LSWMS.h
+
+/usr/local/include/opencv2/core/core.hpp
+opencv2/core/types_c.h
+/usr/local/include/opencv2/core/opencv2/core/types_c.h
+opencv2/core/version.hpp
+/usr/local/include/opencv2/core/opencv2/core/version.hpp
+limits.h
+-
+algorithm
+-
+cmath
+-
+cstddef
+-
+complex
+-
+map
+-
+new
+-
+string
+-
+vector
+-
+sstream
+-
+opencv2/core/operations.hpp
+/usr/local/include/opencv2/core/opencv2/core/operations.hpp
+opencv2/core/mat.hpp
+/usr/local/include/opencv2/core/opencv2/core/mat.hpp
+
+/usr/local/include/opencv2/core/core_c.h
+opencv2/core/types_c.h
+/usr/local/include/opencv2/core/opencv2/core/types_c.h
+
+/usr/local/include/opencv2/core/mat.hpp
+limits.h
+-
+string.h
+-
+
+/usr/local/include/opencv2/core/operations.hpp
+string.h
+-
+limits.h
+-
+ext/atomicity.h
+-
+bits/atomicity.h
+-
+limits
+-
+
+/usr/local/include/opencv2/core/types_c.h
+assert.h
+-
+stdlib.h
+-
+string.h
+-
+float.h
+-
+stdint.h
+-
+intrin.h
+-
+emmintrin.h
+-
+fastmath.h
+-
+math.h
+-
+ipl.h
+-
+ipl/ipl.h
+-
+tegra_round.hpp
+/usr/local/include/opencv2/core/tegra_round.hpp
+emmintrin.h
+/usr/local/include/opencv2/core/emmintrin.h
+
+/usr/local/include/opencv2/core/version.hpp
+
+/usr/local/include/opencv2/highgui/highgui.hpp
+opencv2/core/core.hpp
+/usr/local/include/opencv2/highgui/opencv2/core/core.hpp
+opencv2/highgui/highgui_c.h
+/usr/local/include/opencv2/highgui/opencv2/highgui/highgui_c.h
+
+/usr/local/include/opencv2/highgui/highgui_c.h
+opencv2/core/core_c.h
+/usr/local/include/opencv2/highgui/opencv2/core/core_c.h
+
+/usr/local/include/opencv2/imgproc/imgproc.hpp
+opencv2/core/core.hpp
+/usr/local/include/opencv2/imgproc/opencv2/core/core.hpp
+opencv2/imgproc/types_c.h
+/usr/local/include/opencv2/imgproc/opencv2/imgproc/types_c.h
+
+/usr/local/include/opencv2/imgproc/types_c.h
+opencv2/core/core_c.h
+/usr/local/include/opencv2/imgproc/opencv2/core/core_c.h
+
