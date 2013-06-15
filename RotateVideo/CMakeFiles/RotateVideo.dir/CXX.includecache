@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nehiljain/Ubuntu One/workspace/RotateVideo/src/RotateVideo.cpp
+/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/src/RotateVideo.cpp
 iostream
 -
 stdio.h
@@ -14,11 +14,11 @@ stdio.h
 opencv2/opencv.hpp
 -
 opencv2/core/core.hpp
-/home/nehiljain/Ubuntu One/workspace/RotateVideo/src/opencv2/core/core.hpp
+/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/src/opencv2/core/core.hpp
 opencv2/highgui/highgui.hpp
-/home/nehiljain/Ubuntu One/workspace/RotateVideo/src/opencv2/highgui/highgui.hpp
+/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/src/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/home/nehiljain/Ubuntu One/workspace/RotateVideo/src/opencv2/imgproc/imgproc.hpp
+/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/src/opencv2/imgproc/imgproc.hpp
 
 /usr/local/include/opencv2/calib3d/calib3d.hpp
 opencv2/core/core.hpp

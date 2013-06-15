@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nehiljain/Ubuntu One/workspace/RotateVideo/src/RotateVideo.cpp" "/home/nehiljain/Ubuntu One/workspace/RotateVideo/CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.o"
+  "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/src/RotateVideo.cpp" "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

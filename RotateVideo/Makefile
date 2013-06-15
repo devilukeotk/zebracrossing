@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/nehiljain/Ubuntu One/workspace/RotateVideo"
+CMAKE_SOURCE_DIR = "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/nehiljain/Ubuntu One/workspace/RotateVideo"
+CMAKE_BINARY_DIR = "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nehiljain/Ubuntu One/workspace/RotateVideo/CMakeFiles" "/home/nehiljain/Ubuntu One/workspace/RotateVideo/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/CMakeFiles" "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nehiljain/Ubuntu One/workspace/RotateVideo/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

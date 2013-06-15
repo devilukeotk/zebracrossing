@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/nehiljain/Ubuntu One/workspace/RotateVideo"
+CMAKE_SOURCE_DIR = "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/nehiljain/Ubuntu One/workspace/RotateVideo"
+CMAKE_BINARY_DIR = "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/RotateVideo.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/RotateVideo.dir/flags.make
 
 CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.o: CMakeFiles/RotateVideo.dir/flags.make
 CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.o: src/RotateVideo.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nehiljain/Ubuntu One/workspace/RotateVideo/CMakeFiles" $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.o -c "/home/nehiljain/Ubuntu One/workspace/RotateVideo/src/RotateVideo.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.o -c "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/src/RotateVideo.cpp"
 
 CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nehiljain/Ubuntu One/workspace/RotateVideo/src/RotateVideo.cpp" > CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/src/RotateVideo.cpp" > CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.i
 
 CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nehiljain/Ubuntu One/workspace/RotateVideo/src/RotateVideo.cpp" -o CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/src/RotateVideo.cpp" -o CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.s
 
 CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.o.requires:
 .PHONY : CMakeFiles/RotateVideo.dir/src/RotateVideo.cpp.o.requires
@@ -117,6 +117,6 @@ CMakeFiles/RotateVideo.dir/clean:
 .PHONY : CMakeFiles/RotateVideo.dir/clean
 
 CMakeFiles/RotateVideo.dir/depend:
-	cd "/home/nehiljain/Ubuntu One/workspace/RotateVideo" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/nehiljain/Ubuntu One/workspace/RotateVideo" "/home/nehiljain/Ubuntu One/workspace/RotateVideo" "/home/nehiljain/Ubuntu One/workspace/RotateVideo" "/home/nehiljain/Ubuntu One/workspace/RotateVideo" "/home/nehiljain/Ubuntu One/workspace/RotateVideo/CMakeFiles/RotateVideo.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo" "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo" "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo" "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo" "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/CMakeFiles/RotateVideo.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/RotateVideo.dir/depend
 

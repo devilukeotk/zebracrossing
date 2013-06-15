@@ -50,10 +50,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/nehiljain/Ubuntu One/workspace/RotateVideo"
+CMAKE_SOURCE_DIR = "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/nehiljain/Ubuntu One/workspace/RotateVideo"
+CMAKE_BINARY_DIR = "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo"
 
 #=============================================================================
 # Target rules for target CMakeFiles/RotateVideo.dir
@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = "/home/nehiljain/Ubuntu One/workspace/RotateVideo"
 CMakeFiles/RotateVideo.dir/all:
 	$(MAKE) -f CMakeFiles/RotateVideo.dir/build.make CMakeFiles/RotateVideo.dir/depend
 	$(MAKE) -f CMakeFiles/RotateVideo.dir/build.make CMakeFiles/RotateVideo.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nehiljain/Ubuntu One/workspace/RotateVideo/CMakeFiles"  1
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/CMakeFiles"  1
 	@echo "Built target RotateVideo"
 .PHONY : CMakeFiles/RotateVideo.dir/all
 
@@ -72,9 +72,9 @@ all: CMakeFiles/RotateVideo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RotateVideo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nehiljain/Ubuntu One/workspace/RotateVideo/CMakeFiles" 1
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/CMakeFiles" 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/RotateVideo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nehiljain/Ubuntu One/workspace/RotateVideo/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nehiljain/Ubuntu One/workspace/zebracrossing/RotateVideo/CMakeFiles" 0
 .PHONY : CMakeFiles/RotateVideo.dir/rule
 
 # Convenience name for target.

@@ -83,6 +83,7 @@ int ratio = 3;
 int kernel_size = 3;
 char* window_name = "EdgeMap";
 Mat src_gray;
+RNG rng(12345);
 /**
  * @function CannyThreshold
  * @brief Trackbar callback - Canny thresholds input with a ratio 1:3
@@ -99,15 +100,43 @@ void CannyThreshold( int, void* )
   imshow( window_name, detected_edges );
  }
 
+
+ void DrawContours(cv::Mat &imgCanny, cv::Mat &outputImg) {
+ 	
+ 	cv::Mat imgContour;
+ 	//sequences for Contours might be useless later on
+	vector< vector<Point> > contours;
+	vector<vector<Point> > contours_poly( contours.size() );
+  	vector<Rect> boundRect( contours.size() );
+  	imgCanny.copyTo(imgContour);
+  	//contours
+	findContours(imgContour, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
+	
+	int minArea = 500, maxArea = 100000; 
+
+	// keep only contours of a certain size
+	for (vector<vector<Point> >::iterator it=contours.end(); it!=contours.begin(); it--) {
+	    if ((*it).size()<minArea || (*it).size()>maxArea) {
+	        contours.erase(it);
+	    }
+	}
+
+	// cv::drawContours(imgContour, contours, -1, cvScalar(255,0,0), CV_FILLED);
+	cvNamedWindow("Contours", CV_WINDOW_AUTOSIZE );
+	imshow("Contours", imgContour);
+
+ }
+
 /** This function contains the actions performed for each image*/
 void processImage(cv::Mat &imgGRAY, cv::Mat &outputImg)
 {
-	cv::Mat imgCanny;
+	cv::Mat imgCanny, imgThresh;
 
 	// Canny
 	cv::Canny(imgGRAY, imgCanny, 70, 200, 3);
 	cvNamedWindow("EdgeMap", CV_WINDOW_AUTOSIZE );
 	imshow("EdgeMap", imgCanny);
+	
 	// Hough
 	vector<vector<cv::Point> > lineSegments;
 	vector<cv::Point> aux;
