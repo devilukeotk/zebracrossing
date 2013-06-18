@@ -11,6 +11,7 @@
 #endif
 
 #define USE_PPHT
+// #undef USE_PPHT
 #define MAX_NUM_LINES	200
 
 #include <opencv2/opencv.hpp>
@@ -187,7 +188,19 @@ void processImage(cv::Mat &imgGRAY, cv::Mat &outputImg)
 		pt1.y = lines[i][1];
 		pt2.x = lines[i][2];
 		pt2.y = lines[i][3];
-		line(outputImg, pt1, pt2, CV_RGB(255,0,0), 2);
+		double theta = atan( (double)(pt2.y - pt1.y)/(pt2.x - pt1.x) ); /*slope of line*/
+        double degree = theta*180/CV_PI;
+      
+		printf("angle:%f", degree);        
+		
+		// line(outputImg, pt1, pt2, CV_RGB(255,0,0), 2);
+
+
+//replace the degrees of the lines properly with statistical measurements
+		if(fabs(degree)<100 && fabs(degree) > 70){
+			line(outputImg, pt1, pt2, CV_RGB(255,0,0), 2);
+		}
+		
 		/*circle(outputImg, pt1, 2, CV_RGB(255,255,255), CV_FILLED);
 		circle(outputImg, pt1, 3, CV_RGB(0,0,0),1);
 		circle(outputImg, pt2, 2, CV_RGB(255,255,255), CV_FILLED);
@@ -204,6 +217,21 @@ void processImage(cv::Mat &imgGRAY, cv::Mat &outputImg)
 
 }
 
+
+void drawHorizon(cv::Mat &inputImg){
+	//draws horizon on the frame, by hard coding it to the midway.
+	
+	
+	printf("The dinmension of the input frame is width=%d and height=%d",inputImg.cols, inputImg.rows);
+	Point pt1, pt2;
+		pt1.x = (int) inputImg.cols/4;
+		pt1.y = 0;
+		pt2.x = (int) inputImg.cols/4;
+		pt2.y = (int) inputImg.rows;
+	line(inputImg, pt1, pt2, CV_RGB(0,255,0), 5);
+	cvNamedWindow("DrawHorizon", CV_WINDOW_AUTOSIZE );
+	imshow("DrawHorizon", inputImg);
+}
 
 int main( int argc, char** argv )
 {  	
@@ -342,6 +370,8 @@ int main( int argc, char** argv )
 		// ++++++++++++++++++++++++++++++++++++++++
 		// Process		
 		// ++++++++++++++++++++++++++++++++++++++++
+		
+
 		// Color Conversion
 		if(inputImg.channels() == 3)
 		{
@@ -362,7 +392,13 @@ int main( int argc, char** argv )
 //   		imgGRAY.copyTo(src_gray);
 //   		/// Show the image
 //   		CannyThreshold(0,0);
+		
 		processImage(imgGRAY, outputImg);
+		
+// to be removed later, doesnt need to be
+// in the final code as horizon can be computed with accelerator value
+		drawHorizon(outputImg);
+		
 		// ++++++++++++++++++++++++++++++++++++++++
 		// View	
 		// ++++++++++++++++++++++++++++++++++++++++
