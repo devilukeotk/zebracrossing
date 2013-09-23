@@ -1,1 +1,0 @@
-/home/nehiljain/Ubuntu One/workspace/vanishingPoint/CMakeFiles/vanishingPoint.dir

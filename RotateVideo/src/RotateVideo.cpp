@@ -26,27 +26,27 @@ using namespace cv;
 *GLOBAL VARIABLES
 *
 */
-int lowerH=0;
-int lowerS=0;
-int lowerV=0;
+// int lowerH=0;
+// int lowerS=0;
+// int lowerV=0;
 
-int upperH=180;
-int upperS=256;
-int upperV=256;
+// int upperH=180;
+// int upperS=256;
+// int upperV=256;
 
 
 
-void setwindowSettings(){
+// void setwindowSettings(){
  	
- 	cvNamedWindow("Video");
- 	cvNamedWindow("Ball");
-    cvCreateTrackbar("LowerH", "Ball", &lowerH, 180, NULL);
-    cvCreateTrackbar("UpperH", "Ball", &upperH, 180, NULL);
-    cvCreateTrackbar("LowerS", "Ball", &lowerS, 256, NULL);
-    cvCreateTrackbar("UpperS", "Ball", &upperS, 256, NULL);
-    cvCreateTrackbar("LowerV", "Ball", &lowerV, 256, NULL);
-    cvCreateTrackbar("UpperV", "Ball", &upperV, 256, NULL); 
-}
+//  	cvNamedWindow("Video");
+//  	cvNamedWindow("Ball");
+//     cvCreateTrackbar("LowerH", "Ball", &lowerH, 180, NULL);
+//     cvCreateTrackbar("UpperH", "Ball", &upperH, 180, NULL);
+//     cvCreateTrackbar("LowerS", "Ball", &lowerS, 256, NULL);
+//     cvCreateTrackbar("UpperS", "Ball", &upperS, 256, NULL);
+//     cvCreateTrackbar("LowerV", "Ball", &lowerV, 256, NULL);
+//     cvCreateTrackbar("UpperV", "Ball", &upperV, 256, NULL); 
+// }
 
 
 /*
@@ -73,10 +73,7 @@ void generateThreasholdValues(cv::Mat &inputtImg){
 
 //Canny edge detector 
 
-/// Global variables
-
-
-
+// Global variables
 int edgeThresh = 1;
 int lowThreshold;
 int const max_lowThreshold = 100;
@@ -101,32 +98,33 @@ void CannyThreshold( int, void* )
   imshow( window_name, detected_edges );
  }
 
-
- void DrawContours(cv::Mat &imgCanny, cv::Mat &outputImg) {
+// This is a method to find contours and overlay on the image
+// This method is not useful in zerbracrossin detection. Hence commented
+// void DrawContours(cv::Mat &imgCanny, cv::Mat &outputImg) {
  	
- 	cv::Mat imgContour;
- 	//sequences for Contours might be useless later on
-	vector< vector<Point> > contours;
-	vector<vector<Point> > contours_poly( contours.size() );
-  	vector<Rect> boundRect( contours.size() );
-  	imgCanny.copyTo(imgContour);
-  	//contours
-	findContours(imgContour, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
+//  	cv::Mat imgContour;
+//  	//sequences for Contours might be useless later on
+// 	vector< vector<Point> > contours;
+// 	vector<vector<Point> > contours_poly( contours.size() );
+//   	vector<Rect> boundRect( contours.size() );
+//   	imgCanny.copyTo(imgContour);
+//   	//contours
+// 	findContours(imgContour, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
 	
-	int minArea = 500, maxArea = 100000; 
+// 	int minArea = 500, maxArea = 100000; 
 
-	// keep only contours of a certain size
-	for (vector<vector<Point> >::iterator it=contours.end(); it!=contours.begin(); it--) {
-	    if ((*it).size()<minArea || (*it).size()>maxArea) {
-	        contours.erase(it);
-	    }
-	}
+// 	// keep only contours of a certain size
+// 	for (vector<vector<Point> >::iterator it=contours.end(); it!=contours.begin(); it--) {
+// 	    if ((*it).size()<minArea || (*it).size()>maxArea) {
+// 	        contours.erase(it);
+// 	    }
+// 	}
 
-	// cv::drawContours(imgContour, contours, -1, cvScalar(255,0,0), CV_FILLED);
-	cvNamedWindow("Contours", CV_WINDOW_AUTOSIZE );
-	imshow("Contours", imgContour);
+// 	// cv::drawContours(imgContour, contours, -1, cvScalar(255,0,0), CV_FILLED);
+// 	cvNamedWindow("Contours", CV_WINDOW_AUTOSIZE );
+// 	imshow("Contours", imgContour);
 
- }
+//  }
 
 /** This function contains the actions performed for each image*/
 void processImage(cv::Mat &imgGRAY, cv::Mat &outputImg)
@@ -188,6 +186,8 @@ void processImage(cv::Mat &imgGRAY, cv::Mat &outputImg)
 		pt1.y = lines[i][1];
 		pt2.x = lines[i][2];
 		pt2.y = lines[i][3];
+
+		//calculate the slope of the line
 		double theta = atan( (double)(pt2.y - pt1.y)/(pt2.x - pt1.x) ); /*slope of line*/
         double degree = theta*180/CV_PI;
       
@@ -217,6 +217,7 @@ void processImage(cv::Mat &imgGRAY, cv::Mat &outputImg)
 
 }
 
+//This method should be replaced by actual Horizon calculation beased on the acelerator values
 
 void drawHorizon(cv::Mat &inputImg){
 	//draws horizon on the frame, by hard coding it to the midway.
@@ -229,8 +230,8 @@ void drawHorizon(cv::Mat &inputImg){
 		pt2.x = (int) inputImg.cols/4;
 		pt2.y = (int) inputImg.rows;
 	line(inputImg, pt1, pt2, CV_RGB(0,255,0), 5);
-	cvNamedWindow("DrawHorizon", CV_WINDOW_AUTOSIZE );
-	imshow("DrawHorizon", inputImg);
+	// cvNamedWindow("DrawHorizon", CV_WINDOW_AUTOSIZE );
+	// imshow("DrawHorizon", inputImg);
 }
 
 int main( int argc, char** argv )
