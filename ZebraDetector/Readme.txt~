@@ -1,0 +1,32 @@
+Commands
+
+Author: Nehil Jain
+Language: C++
+Platform: Linux
+Dependencies: OpenCV
+
+
+Commands to execute
+
+ZebraDetector 
+
+-video filename, 
+./ZebraDetector -video ../input-videos/IMG_0019.avi
+
+-image filename, 
+./ZebraDetector -video ../input-files/IMG.JPG
+
+-rotate +90 or 0 or -90, to rotate the video in desired direction
+
+-resizewidth dimension, 
+
+example commands
+
+
+
+
+
+
+
+
+
